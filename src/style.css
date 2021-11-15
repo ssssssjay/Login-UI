@@ -12,7 +12,7 @@ body {
 }
 a {
     text-decoration: none;
-    color: #c4c4c4;
+    color: #767676;
 }
 .blind {
     border: 0;
@@ -29,6 +29,7 @@ a {
 .modal {
     max-width: 520px;
     border: 1px solid #c4c4c4;
+    border-radius: 10px;
 }
 
 /* header */
@@ -59,7 +60,9 @@ a {
 .inp {
     border: 1px solid #c4c4c4;
     border-radius: 5px;
-    /* padding-left: 16px; */
+    padding-left: 16px;
+
+    font-family: SpoqaHanSansNeo-Regular;    
 
     width: 472px;
     height: 50px;
@@ -71,27 +74,28 @@ a {
     box-sizing: border-box;
 }
 
-.btn-stay {
-    position: relative;
-    margin-left: 30px;
-    border: none;
-    background-color: #fff;
-    vertical-align: middle;
+.inp-pw {
     margin-bottom: 21px;
 }
 
+.btn-stay {
+    display: inline-block;
+    margin-bottom: 21px;
+    color: #767676;
+}
+
 .btn-stay::before {
-    display: block;
+    display: inline-block;
     content: '';
-    background-image: url(./check-box.png);
     width: 22px;
     height: 22px;
-
-    position: absolute;
-    left: -30px;
-
+    background-image: url(../check-box-unchecked.png);
+    background-size: 22px;
     vertical-align: middle;
-
+    margin-right: 8px;
+}
+.btn-stay:checked + .btn-stay::before {
+    background-image: url(../check-box-checked.png);
 }
 
 .btn-login {
@@ -117,6 +121,11 @@ a {
 .contact {
     text-align: center;
     margin-bottom: 30px;
+    font-size: 14px;
+}
+.sign-in:hover,
+.find:hover {
+    text-decoration: underline;
 }
 .sign-in::after {
     display: inline-block;
@@ -144,16 +153,78 @@ a {
     height: 1px;
     background-color: #c4c4c4;
 
-    position: absolute;
-    top: 50%;
+    vertical-align: middle;
+
+    /* position: absolute; */
+    /* top: 50%; */
 }
 .break::after {
-    /* margin-left: 13px; */
-    right: 13px;
+    margin-left: 13px;
+
+    /* right: 13px; */
 }    
 .break::before {
-    /* margin-right: 13px; */
-    left: 13px;
+    margin-right: 13px;
+
+    /* left: 13px; */
 }
 
 /* out login */
+.out-login {
+    padding: 0 24px 25px 24px;
+}
+.out-login li {
+    margin-bottom: 10px;
+}
+.out-login li:last-child {
+    margin-bottom: 0;
+}
+.btn-out-login {
+    display: inline-block;
+    width: 472px;
+    /* height: 50px; */
+    /* box-sizing: border-box; */
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 0 15px 0;
+        
+    position: relative;
+}
+.btn-out-login.google {
+    border: 1px solid #767676;
+}
+.btn-out-login.facebook {
+    border: 1px solid #2D9CDB;
+}
+.btn-out-login.naver {
+    border: 1px solid #00BF18;
+}
+.btn-out-login.kakao {
+    border: 1px solid #F2C94C;
+}
+
+
+
+.btn-out-login::before{
+    display: inline-block;
+    content: '';
+    width: 28px;
+    height: 28px;
+    background-size: 28px;
+    position: absolute;
+    top: 11px;
+    left: 12px;
+}
+.btn-out-login.google::before {
+    background-image: url(./1.png);
+}
+
+.btn-out-login.facebook::before {
+    background-image: url(./2.png);
+}
+.btn-out-login.naver::before {
+    background-image: url(./3.png);
+}
+.btn-out-login.kakao::before {
+    background-image: url(./4.png);
+}

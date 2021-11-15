@@ -20,10 +20,13 @@
 
             <p class="login-tit">위니브에서 여러분의 궁금증을 해결하세요!</p>
 
-            <input type="text" id="" name="" required placeholder="아이디" class="inp">
-            <input type="password" id="" name="" required placeholder="비밀번호" class="inp">
+            <input type="text" id="id" name="id" required placeholder="아이디" class="inp inp-id">
+            <label for="id" class="blind">아이디를 입력하세요</label>
+            <input type="password" id="pw" name="pw" required placeholder="비밀번호" class="inp inp-pw">
+            <label for="pw" class="blind">비밀번호 입력하세요</label>
 
-            <button type="고민좀하자" class="btn-stay">로그인 상태 유지</button>
+            <input type="checkbox" id="chkbox" name="checkbox" class="btn-stay blind">
+            <label for="chkbox" class="btn-stay">로그인 상태유지</label>
 
             <button type="submit" class="btn-login">로그인</button>
 
@@ -37,17 +40,18 @@
         <p class="break">또는</p>
     
         <ul class="out-login">
+            <h2 class="blind">외부 계정으로 로그인</h2>
             <li>
-                <a>알록이 계정으로 로그인</a>
+                <a class="btn-out-login google">알록이 계정으로 로그인</a>
             </li>
             <li>
-                <a>얼굴책 계정으로 로그인</a>
+                <a class="btn-out-login facebook">얼굴책 계정으로 로그인</a>
             </li>
             <li>
-                <a>초록이 계정으로 로그인</a>
+                <a class="btn-out-login naver">초록이 계정으로 로그인</a>
             </li>
             <li>
-                <a>노랑이 계정으로 로그인</a>
+                <a class="btn-out-login kakao">노랑이 계정으로 로그인</a>
             </li>
         </ul>
     
