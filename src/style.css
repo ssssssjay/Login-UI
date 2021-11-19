@@ -45,6 +45,8 @@ a {
 }
 
 .btn-close {
+    width: 16px;
+    height: 16px;
     float: right;
 }
 
@@ -154,19 +156,12 @@ a {
     background-color: #c4c4c4;
 
     vertical-align: middle;
-
-    /* position: absolute; */
-    /* top: 50%; */
 }
 .break::after {
     margin-left: 13px;
-
-    /* right: 13px; */
 }    
 .break::before {
     margin-right: 13px;
-
-    /* left: 13px; */
 }
 
 /* out login */
@@ -186,9 +181,15 @@ a {
     /* box-sizing: border-box; */
     border-radius: 5px;
     text-align: center;
-    padding: 15px 0 15px 0;
-        
+
+    /* 플롯레프트를 쓰니까 모냥새가 이상해서 패딩값과 라인하이트를 수정했습니다 */
+    /* 이렇게 플롯을 쓰는것이 맞을까요??? */
+    padding: 11px 0 11px 12px;
+    line-height: 28px;
+
     position: relative;
+
+    cursor: pointer;
 }
 .btn-out-login.google {
     border: 1px solid #767676;
@@ -211,14 +212,16 @@ a {
     width: 28px;
     height: 28px;
     background-size: 28px;
-    position: absolute;
-    top: 11px;
-    left: 12px;
+    
+    float: left;
+
+    /* position: absolute; */
+    /* top: 11px; */
+    /* left: 12px; */
 }
 .btn-out-login.google::before {
     background-image: url(./1.png);
 }
-
 .btn-out-login.facebook::before {
     background-image: url(./2.png);
 }
